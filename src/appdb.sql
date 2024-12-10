@@ -1,0 +1,54 @@
+/*!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19  Distrib 10.5.25-MariaDB, for Linux (x86_64)
+--
+-- Host: terraform-20241210060759940300000001.chucqu8s0tve.eu-north-1.rds.amazonaws.com    Database: appdb
+-- ------------------------------------------------------
+-- Server version	8.0.39
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ip_logs`
+--
+
+DROP TABLE IF EXISTS `ip_logs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ip_logs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `client_ip` varchar(45) DEFAULT NULL,
+  `reversed_ip` varchar(45) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ip_logs`
+--
+
+LOCK TABLES `ip_logs` WRITE;
+/*!40000 ALTER TABLE `ip_logs` DISABLE KEYS */;
+INSERT INTO `ip_logs` VALUES (1,'127.0.0.1','1.0.0.127','2024-12-10 07:58:04'),(2,'93.174.93.12','12.93.174.93','2024-12-10 08:03:52'),(3,'127.0.0.1','1.0.0.127','2024-12-10 08:11:42'),(4,'127.0.0.1','1.0.0.127','2024-12-10 08:11:46'),(5,'139.5.248.165','165.248.5.139','2024-12-10 08:16:20'),(6,'139.5.248.165','165.248.5.139','2024-12-10 08:16:57');
+/*!40000 ALTER TABLE `ip_logs` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-12-10  8:44:09
